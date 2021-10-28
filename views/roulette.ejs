@@ -2,18 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>21 To-Do</title>
+		<title>Casino Roullete</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 
 		<link rel="stylesheet" href="style.css" />
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
 		/>
 		<link
 			rel="stylesheet"
 			href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
-		/>
+		/> -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
 			rel="stylesheet"
@@ -21,34 +21,44 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="page-header text-center">
+			<header class="header">
 				<h1>Roulette</h1>
-				<a href="/login" class="btn btn-default"
-					><span class="fa fa-user"></span> Admin Login</a
+				<a href="/login" class="btn btn-default">
+					<button>Admin Login</button></a
 				>
+				<h2 id="result"></h2>
 			</header>
-			<% game.forEach(el => {%>
-			<input
-				id="<%=el._id%>"
-				type="number"
-				placeholder="Enter your Bet"
-				name="msg"
-				class="betAmount"
-			/>
-			<input
-				type="hidden"
-				value=""
-				placeholder="Enter your Bet"
-				name="bet"
-				class="betValue"
-			/>
+			<div class="roulette-table">
+				<div class="controls">
+					<% game.forEach(el => {%>
+					<div class="betCtrl">
+						<input
+							id="<%=el._id%>"
+							type="number"
+							placeholder="Enter your Bet"
+							name="msg"
+							class="betAmount"
+						/>
+						<button type="submit" class="submitBtn">Bet</button>
+					</div>
 
-			<input type="button" value="red" class="betChoice" />
-			<input type="button" value="black" class="betChoice" />
-			<input type="button" value="green" class="betChoice" />
-			<button type="submit" class="submitBtn">Submit</button>
-			<h2 id="result"></h2>
-			<%})%>
+					<input
+						type="hidden"
+						value=""
+						placeholder="Enter your Bet"
+						name="bet"
+						class="betValue"
+					/>
+					<button value="red" class="betChoice" id="red"></button>
+					<button value="black" class="betChoice" id="black"></button>
+					<button value="green" class="betChoice" id="green"></button>
+					<!-- <input type="button" />
+					<input type="button" />
+					<input /> -->
+
+					<%})%>
+				</div>
+			</div>
 		</div>
 		<script src="main.js"></script>
 	</body>

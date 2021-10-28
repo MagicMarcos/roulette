@@ -1,7 +1,83 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
+body {
+	background-color: rgb(30, 0, 0);
+	background-image: url('/img/body-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
 }
-img{
-  height: 200px;
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 950px;
+	margin: auto;
+}
+.header {
+	background-image: url('/img/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.roulette-table {
+	background: url('/img/casino-bg.png');
+	background-size: contain;
+	width: 950px;
+	height: 497px;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+}
+
+.controls {
+	display: flex;
+	border: 1px solid black;
+	margin-bottom: 45px;
+	margin-right: 19px;
+}
+
+.betCtrl {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-right: 10px;
+}
+
+.betChoice {
+	border-radius: 50%;
+	padding: 45px;
+	margin-left: 5px;
+}
+#red {
+	background-image: url('/img/chips.png');
+	background-position: -4px -14px;
+}
+#black {
+	background-image: url('/img/chips.png');
+	background-position: 100px -14px;
+}
+#green {
+	background-image: url('/img/chips.png');
+	background-position: 290px -14px;
+}
+
+#red:active {
+	background: red;
+}
+
+#black:active {
+	background: black;
+}
+
+#green:active {
+	background: green;
 }
